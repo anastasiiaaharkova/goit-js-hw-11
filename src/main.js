@@ -34,8 +34,8 @@ function handleSubmit(event) {
   showLoader();
 
   getImagesByQuery(searchText)
-    .then(response => {
-      const images = response.data.hits;
+    .then(data => {
+      const images = data.hits;
 
       if (images.length === 0) {
         iziToast.error({
